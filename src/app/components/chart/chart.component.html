@@ -1,0 +1,42 @@
+<h1 class="chart-style">Insuredmine Assesment</h1>
+
+<div class="chart-style">
+    <div class="chart-dispaly">
+      <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="chartColors"
+        [legend]="lineChartLegend" [chartType]="lineChartType" class="canvasHeight" id="cases-chart"></canvas>
+    </div>
+  </div>
+
+  <div class="chart-style">
+    <div class="table-box">Table fot Referance</div>
+    <table>
+      <tr>
+          <th scope="col">#</th>
+          <th scope="col">Campaign Name</th>
+          <th scope="col">Date</th>
+          <th scope="col">Status</th>
+          <th scope="col">Recipients</th>
+          <th scope="col">Sent</th>
+          <th scope="col">Opened</th>
+          <th scope="col">Clicked</th>
+          <th scope="col">Bounced</th>
+          <th scope="col">Complaint</th>
+          <th scope="col">Action</th>
+      </tr>
+    <tr *ngFor="let data of tableData; index as i">
+          <th scope="row">{{i}}</th>
+          <td>{{data.title}}</td>
+          <td>{{data.date}}</td>
+          <td>{{data.status}}</td>
+          <td>{{data.recipients}}</td>
+          <td>{{data.report.Sent}}</td>
+          <td>{{data.report.Opened}}</td>
+          <td>{{data.report.Clicked}}</td>
+          <td>{{data.report.Bounced}}</td>
+          <td>{{data.report.Complaint}}</td>
+          <td>{{data.report.reject}}</td>
+      </tr>
+  
+  </table>
+  
+  </div>
